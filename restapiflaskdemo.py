@@ -84,7 +84,7 @@ def getProductId(productId):
     Product = Product_schema.load(data)
     return make_response(jsonify({"product":result}),202)
     
- @app.route('/products/<int:productId>',methods=['DELETE'])   
+@app.route('/products/<int:productId>',methods=['DELETE'])   
 def getProductId(productId):
     get_product = product.query.get(productId)
     Product_schema = ProductSchema()
